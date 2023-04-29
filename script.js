@@ -12,18 +12,23 @@ const counter1 = document.querySelector('#D1');
 const counter2 = document.querySelector('#D2');
 const maxdisp = document.querySelector("#MaxScore");
 const maxdisp2 = document.querySelector("#MaxScore2");
+const reload = document.querySelector("#reload");
+const reloade = document.querySelector("#reloade");
 
-
+reloade.onclick=rel;
+reload.onclick=rel;
 button1.onclick=start;
 
 
-maxdisp.textContent = "Max Score Player: " + localStorage.getItem(key1);
-
+maxdisp.textContent = "Max Score: " + localStorage.getItem(key1);
+function rel() {
+    window.location.reload();
+}
 
 function start() {
 	const startime = Date.now();
     display.textContent=formatTime(time);
-    button1.onclick=()=>counter1.textContent="Player Score: " + click1++;
+    button1.onclick=()=>counter1.textContent="Score: " + click1++;
 
 
     const interval=setInterval(()=>{
@@ -39,7 +44,7 @@ function start() {
       		localStorage.setItem(key1, click1 - 1);
       	}
 
-      	maxdisp.textContent = "Max Score Player: " + localStorage.getItem(key1);
+      	maxdisp.textContent = "Max Score: " + localStorage.getItem(key1);
 
 }, time);
 }

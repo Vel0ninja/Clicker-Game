@@ -61,3 +61,16 @@ body {
 	background: rgba(1, 1, 1, 1.0);
 	background: linear-gradient(135deg, rgba(1, 1, 1, 1.0), rgba(1, 6, 77, 1.0));
 }
+#reload{
+    width: 75px;
+    position: relative;
+    bottom: 33px;
+}
+#web{
+    position: relative;
+    right: -75px;
+    color: rgb(107, 116, 153);
+    width: 218px;
+    height: 30px;
+    bottom: -17px;
+}
